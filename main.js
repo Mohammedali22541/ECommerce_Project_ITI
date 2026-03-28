@@ -58,17 +58,17 @@ async function handleLogin() {
   let isValid = true;
 
   if (formData.email === "") {
-    showFieldError(emailError, "email is required");
+    showFieldError(emailError, "Email is required");
     emailInput.classList.add("input-error");
     isValid = false;
   } else if (!validateEmail(formData.email)) {
-    showFieldError(emailError, "enter valid email");
+    showFieldError(emailError, "Please enter a valid email address");
     emailInput.classList.add("input-error");
     isValid = false;
   }
 
   if (formData.password === "") {
-    showFieldError(passwordError, "password is required");
+    showFieldError(passwordError, "Password is required");
     passwordInput.classList.add("input-error");
     isValid = false;
   }
@@ -92,7 +92,7 @@ async function handleLogin() {
 
     if (response.ok && result.message === "success") {
       localStorage.setItem("token", result.token);
-      showMessage(userMessage, "success", "success");
+      showMessage(userMessage, "Success", "success");
 
       setTimeout(() => {
         window.location.href = "homePage.html";
@@ -186,51 +186,66 @@ async function handleRegister() {
     nameInput.classList.add("input-error");
     isValid = false;
   } else if (formData.name.length < 3) {
-    showFieldError(nameError, "At least 3 characters");
+    showFieldError(nameError, "Name must be at least 3 characters");
     nameInput.classList.add("input-error");
     isValid = false;
   } else if (formData.name.length > 20) {
-    showFieldError(nameError, "Max 20 characters");
+    showFieldError(nameError, "Name must not exceed 20 characters");
     nameInput.classList.add("input-error");
     isValid = false;
   }
 
   if (formData.email === "") {
-    showFieldError(emailError, "email is required");
+    showFieldError(emailError, "Email is required");
     emailInput.classList.add("input-error");
     isValid = false;
   } else if (!validateEmail(formData.email)) {
-    showFieldError(emailError, "enter valid email");
+    showFieldError(emailError, "Please enter a valid email address");
     emailInput.classList.add("input-error");
     isValid = false;
   }
 
   if (formData.password === "") {
-    showFieldError(passwordError, "password is required");
+    showFieldError(passwordError, "Password is required");
     passwordInput.classList.add("input-error");
     isValid = false;
-  } else if (!/^[A-Z]\w{7,}$/.test(formData.password)) {
-    showFieldError(passwordError, "enter valid password");
+  } else if (formData.password.length < 8) {
+    showFieldError(passwordError, "Password must be at least 8 characters");
+    passwordInput.classList.add("input-error");
+    isValid = false;
+  } else if (!/[a-zA-Z]/.test(formData.password)) {
+    showFieldError(passwordError, "Password must contain at least one letter");
+    passwordInput.classList.add("input-error");
+    isValid = false;
+  } else if (!/\d/.test(formData.password)) {
+    showFieldError(passwordError, "Password must contain at least one number");
+    passwordInput.classList.add("input-error");
+    isValid = false;
+  } else if (!/[^a-zA-Z0-9]/.test(formData.password)) {
+    showFieldError(
+      passwordError,
+      "Password must contain at least one special character",
+    );
     passwordInput.classList.add("input-error");
     isValid = false;
   }
 
   if (formData.rePassword === "") {
-    showFieldError(rePasswordError, "password is required");
+    showFieldError(rePasswordError, "Please confirm your password");
     rePasswordInput.classList.add("input-error");
     isValid = false;
   } else if (formData.password !== formData.rePassword) {
-    showFieldError(rePasswordError, "password is not match");
+    showFieldError(rePasswordError, "Passwords do not match");
     rePasswordInput.classList.add("input-error");
     isValid = false;
   }
 
   if (formData.phone === "") {
-    showFieldError(phoneError, "phone is required");
+    showFieldError(phoneError, "Phone number is required");
     phoneInput.classList.add("input-error");
     isValid = false;
   } else if (!/^01[0125][0-9]{8}$/.test(formData.phone)) {
-    showFieldError(phoneError, "enter valid phone number");
+    showFieldError(phoneError, "Please enter a valid phone number");
     phoneInput.classList.add("input-error");
     isValid = false;
   }
