@@ -1,0 +1,162 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Wishlist</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+    />
+    <link rel="stylesheet" href="./output.css" />
+  </head>
+  <body class="bg-[#f9f9f9]">
+    <nav
+      id="navbar"
+      class="bg-white fixed w-full z-20 top-0 start-0 transition-all duration-300"
+    >
+      <div
+        class="max-w-screen-2xl flex flex-wrap items-center justify-between mx-auto p-4"
+      >
+        <a
+          href="./homePage.html"
+          class="flex items-center space-x-3 rtl:space-x-reverse"
+        >
+          <span
+            class="self-center text-[32px] font-Hedvig font-[400] text-main leading-[43px] whitespace-nowrap"
+          >
+            Trendify
+          </span>
+        </a>
+
+        <div class="flex md:order-2 space-x-3 rtl:space-x-reverse items-center">
+          <a
+            href="./cart.html"
+            id="cartIcon"
+            class="bg-transparent relative text-black text-[25px]"
+          >
+            <i class="fa-solid fa-cart-shopping fa-1xl"></i>
+            <span
+              id="cartCount"
+              class="hidden absolute top-0 right-0 flex items-center justify-center px-2 py-1 text-xs font-bold leading-none text-white translate-x-1/4 -translate-y-1/4 bg-primary rounded-full"
+            >
+              0
+            </span>
+          </a>
+
+          <a
+            href="./wishlist.html"
+            id="wishlistIcon"
+            class="bg-transparent text-black relative text-[25px]"
+          >
+            <i class="fa-solid fa-heart"></i>
+            <span
+              id="wishlistCount"
+              class="hidden absolute top-0 right-0 flex items-center justify-center px-2 py-1 text-xs font-bold leading-none text-white translate-x-1/4 -translate-y-1/4 bg-primary rounded-full"
+            >
+              0
+            </span>
+          </a>
+
+          <button
+            id="menuToggle"
+            type="button"
+            class="inline-flex items-center p-2 w-10 h-10 justify-center text-sm text-black rounded-lg md:hidden hover:bg-gray-100 hover:text-black focus:outline-none"
+          >
+            <span class="sr-only">Open main menu</span>
+            <svg
+              class="w-5 h-5"
+              aria-hidden="true"
+              xmlns="http://www.w3.org/2000/svg"
+              fill="none"
+              viewBox="0 0 17 14"
+            >
+              <path
+                stroke="currentColor"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="2"
+                d="M1 1h15M1 7h15M1 13h15"
+              />
+            </svg>
+          </button>
+        </div>
+
+        <div
+          id="navbarMenu"
+          class="items-center justify-between hidden w-full md:flex md:w-auto md:order-1"
+        >
+          <ul
+            class="flex flex-col bg-white md:bg-transparent p-4 md:p-0 mt-4 font-medium border border-gray-100 rounded-lg md:space-x-8 md:flex-row md:mt-0 md:border-0"
+          >
+            <li>
+              <a
+                href="./homePage.html"
+                class="nav-link block py-2 px-3 capitalize text-black rounded-sm hover:text-primary md:p-0"
+              >
+                home
+              </a>
+            </li>
+
+            <li>
+              <a
+                href="./products.html"
+                class="nav-link block py-2 px-3 capitalize text-black rounded-sm hover:text-primary md:p-0"
+              >
+                products
+              </a>
+            </li>
+
+            <li>
+              <a
+                href="./blog.html"
+                class="nav-link block py-2 px-3 capitalize text-black rounded-sm hover:text-primary md:p-0"
+              >
+                blog
+              </a>
+            </li>
+
+            <li>
+              <a
+                href="./contactus.html"
+                class="nav-link block py-2 px-3 capitalize text-black rounded-sm hover:text-primary md:p-0"
+              >
+                contact us
+              </a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+    <section class="py-20">
+      <div class="container mx-auto px-8 space-y-10">
+        <div class="Main-title text-center space-y-2">
+          <h2
+            class="font-Hedvig font-normal text-[32px] text-main leading-[43px]"
+          >
+            Your Wishlist
+          </h2>
+          <h3
+            class="font-popins font-semibold text-[40px] text-[#090F41] leading-[60px]"
+          >
+            Save Your Favorites for Later!
+          </h3>
+        </div>
+
+        <div
+          id="wishlistContainer"
+          class="grid md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-[21px]"
+        ></div>
+
+        <p
+          id="wishlistEmptyMessage"
+          class="hidden text-center text-2xl font-popins font-medium text-gray-500"
+        >
+          Your wishlist is empty.
+        </p>
+      </div>
+    </section>
+
+    <script src="wishlist.js"></script>
+  </body>
+</html>

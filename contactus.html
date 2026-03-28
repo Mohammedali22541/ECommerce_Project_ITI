@@ -1,0 +1,283 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Blog Page</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+    />
+    <link href="./output.css" rel="stylesheet" />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <nav
+      id="navbar"
+      class="bg-white fixed w-full z-20 top-0 start-0 transition-all duration-300"
+    >
+      <div
+        class="max-w-screen-2xl flex flex-wrap items-center justify-between mx-auto p-4"
+      >
+        <a
+          href="./homePage.html"
+          class="flex items-center space-x-3 rtl:space-x-reverse"
+        >
+          <span
+            class="self-center text-[32px] font-Hedvig font-[400] text-main leading-[43px] whitespace-nowrap"
+          >
+            Trendify
+          </span>
+        </a>
+
+        <div class="flex md:order-2 space-x-3 rtl:space-x-reverse items-center">
+          <a
+            href="./cart.html"
+            id="cartIcon"
+            class="bg-transparent relative text-black text-[25px]"
+          >
+            <i class="fa-solid fa-cart-shopping fa-1xl"></i>
+            <span
+              id="cartCount"
+              class="hidden absolute top-0 right-0 flex items-center justify-center px-2 py-1 text-xs font-bold leading-none text-white translate-x-1/4 -translate-y-1/4 bg-primary rounded-full"
+            >
+              0
+            </span>
+          </a>
+
+          <a
+            href="./wishlist.html"
+            id="wishlistIcon"
+            class="bg-transparent text-black relative text-[25px]"
+          >
+            <i class="fa-solid fa-heart"></i>
+            <span
+              id="wishlistCount"
+              class="hidden absolute top-0 right-0 flex items-center justify-center px-2 py-1 text-xs font-bold leading-none text-white translate-x-1/4 -translate-y-1/4 bg-primary rounded-full"
+            >
+              0
+            </span>
+          </a>
+
+          <button
+            id="menuToggle"
+            type="button"
+            class="inline-flex items-center p-2 w-10 h-10 justify-center text-sm text-black rounded-lg md:hidden hover:bg-gray-100 hover:text-black focus:outline-none"
+          >
+            <span class="sr-only">Open main menu</span>
+            <svg
+              class="w-5 h-5"
+              aria-hidden="true"
+              xmlns="http://www.w3.org/2000/svg"
+              fill="none"
+              viewBox="0 0 17 14"
+            >
+              <path
+                stroke="currentColor"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="2"
+                d="M1 1h15M1 7h15M1 13h15"
+              />
+            </svg>
+          </button>
+        </div>
+
+        <div
+          id="navbarMenu"
+          class="items-center justify-between hidden w-full md:flex md:w-auto md:order-1"
+        >
+          <ul
+            class="flex flex-col bg-white md:bg-transparent p-4 md:p-0 mt-4 font-medium border border-gray-100 rounded-lg md:space-x-8 md:flex-row md:mt-0 md:border-0"
+          >
+            <li>
+              <a
+                href="./homePage.html"
+                class="nav-link block py-2 px-3 capitalize text-black rounded-sm hover:text-primary md:p-0"
+              >
+                home
+              </a>
+            </li>
+
+            <li>
+              <a
+                href="./products.html"
+                class="nav-link block py-2 px-3 capitalize text-black rounded-sm hover:text-primary md:p-0"
+              >
+                products
+              </a>
+            </li>
+
+            <li>
+              <a
+                href="./blog.html"
+                class="nav-link block py-2 px-3 capitalize text-black rounded-sm hover:text-primary md:p-0"
+              >
+                blog
+              </a>
+            </li>
+
+            <li>
+              <a
+                href="./contactus.html"
+                class="nav-link block py-2 px-3 capitalize text-black rounded-sm hover:text-primary md:p-0"
+              >
+                contact us
+              </a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+    <section class="pt-20">
+      <div class="container px-8 grid gap-8">
+        <div class="title flex flex-col gap-2">
+          <h1
+            class="capitalize font-popins font-semibold text-[40px] leading-[48px] text-text"
+          >
+            Contact me
+          </h1>
+          <p class="font-popins font-medium text-lg text-Secondtext">
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+            eiusmod tempor
+          </p>
+        </div>
+        <div class="form grid grid-cols-[75%] gap-8">
+          <div class="grid grid-cols-2 gap-8">
+            <div class="firstName flex flex-col gap-[10px]">
+              <label
+                for="firstName"
+                class="font-popins font-medium text-lg text-text"
+              >
+                First Name
+              </label>
+              <input
+                type="text"
+                id="firstName"
+                class="rounded-[8px] border-main p-4 bg-white focus:border-main"
+              />
+            </div>
+            <div class="lastName flex flex-col gap-[10px]">
+              <label
+                for="lastName"
+                class="font-popins font-medium text-lg text-text"
+              >
+                Last Name
+              </label>
+              <input
+                type="text"
+                id="lastName"
+                class="rounded-[8px] border-main p-4 bg-white focus:border-main"
+              />
+            </div>
+          </div>
+          <div class="grid grid-cols-2 gap-8">
+            <div class="email flex flex-col gap-[10px]">
+              <label
+                for="email"
+                class="font-popins font-medium text-lg text-text"
+              >
+                E-Mail
+              </label>
+              <input
+                type="email"
+                id="email"
+                class="rounded-[8px] border-main p-4 bg-white focus:border-main"
+              />
+            </div>
+            <div class="phoneNumber flex flex-col gap-[10px]">
+              <label
+                for="phoneNumber"
+                class="font-popins font-medium text-lg text-text"
+              >
+                Phone Number
+              </label>
+              <input
+                type="text"
+                id="phoneNumber"
+                class="rounded-[8px] border-main p-4 bg-white focus:border-main"
+              />
+            </div>
+          </div>
+          <div class="topics flex flex-col gap-[10px]">
+            <label
+              for="ChooseTopic"
+              class="font-popins font-medium text-lg text-text"
+            >
+              Choose a topic
+            </label>
+            <select
+              id="ChooseTopic"
+              class="rounded-[8px] border-main p-4 bg-white focus:border-main"
+            >
+              <option
+                value="Men's Fashion"
+                class="font-popins font-normal text-lg text-Secondtext"
+              >
+                Men's Fashion
+              </option>
+              <option
+                value="Men's Fashion"
+                class="font-popins font-normal text-lg text-Secondtext"
+              >
+                Woman's Fashion
+              </option>
+              <option
+                value="Men's Fashion"
+                class="font-popins font-normal text-lg text-Secondtext"
+              >
+                Electronic
+              </option>
+              <option
+                value="Men's Fashion"
+                class="font-popins font-normal text-lg text-Secondtext"
+              >
+                Category
+              </option>
+              <option
+                value="Men's Fashion"
+                class="font-popins font-normal text-lg text-Secondtext"
+              >
+                Blog
+              </option>
+            </select>
+          </div>
+          <div class="message flex flex-col gap-[10px]">
+            <label
+              for="message"
+              class="font-popins font-medium text-lg text-text"
+            >
+              Messsage
+            </label>
+            <textarea
+              rows="6"
+              placeholder="Type your message..."
+              class="rounded-[8px] border-main p-4 bg-white focus:border-main placeholder:font-popins placeholder:font-normal placeholder:text-lg placeholder:text-Secondtext"
+            ></textarea>
+          </div>
+          <div class="terms flex gap-[11px] items-center">
+            <input
+              type="checkbox"
+              name="terms"
+              id="terms"
+              class="bg-white border border-main rounded-md checked:border-white text-main"
+            />
+            <label
+              for="terms"
+              class="font-popins font-normal text-lg text-Secondtext"
+            >
+              I accept the terms
+            </label>
+          </div>
+          <div class="btn">
+            <button
+              class="bg-[#8B5E35] rounded-[32px] py-2 px-20 font-popins font-semibold text-xl text-white"
+            >
+              Submit
+            </button>
+          </div>
+        </div>
+      </div>
+    </section>
+  </body>
+</html>

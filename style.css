@@ -1,0 +1,55 @@
+.home-page {
+  background: linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)),
+    url("./images/bg.jpg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  min-height: 100vh;
+}
+
+.link-active {
+  font-weight: 700;
+  color: #8b5e35;
+}
+
+.author img {
+  width: 30px !important;
+  height: 30px !important;
+}
+
+.li-style {
+  color: #d1d5db;
+  transition: color 0.3s;
+}
+
+.li-style:hover {
+  color: white;
+}
+
+.text-style {
+  color: #d1d5db;
+}
+
+footer .text-Secondtext {
+  color: #d1d5db;
+}
+
+footer .text-bg {
+  color: #d1d5db;
+}
+
+.tab-active {
+  color: #8b5e35;
+  border-color: #8b5e35;
+}
+input::placeholder {
+  font-family: "Poppins";
+  font-weight: 500;
+  font-size: 15px;
+  line-height: 23px;
+  color: #9d9daa;
+}
+
+.input-error {
+  border: 1px solid #ef4444;
+}

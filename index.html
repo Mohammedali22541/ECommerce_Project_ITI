@@ -1,0 +1,126 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Login</title>
+
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+    />
+    <link href="./output.css" rel="stylesheet" />
+    <link rel="stylesheet" href="./style.css" />
+  </head>
+
+  <body class="bg-[#f6f6f6] min-h-screen">
+    <div class="section min-h-screen flex items-center justify-center py-20">
+      <div class="container px-8">
+        <div class="w-full max-w-[700px] mx-auto">
+          <div class="register-form flex flex-col gap-6 justify-center">
+            <div class="info text-center">
+              <h2 class="font-popins text-[32px] leading-[48px] text-[#090F41]">
+                Welcome Back
+              </h2>
+              <span class="font-popins font-normal text-lg text-[#667085]">
+                Please login or sign up to continue our app
+              </span>
+            </div>
+
+            <form id="loginForm" class="flex flex-col gap-6">
+              <div class="Email flex flex-col relative gap-2">
+                <label
+                  for="signEmail"
+                  class="font-popins font-medium text-lg text-[#090F41]"
+                >
+                  E-Mail
+                </label>
+
+                <input
+                  id="signEmail"
+                  placeholder="Mohammed@gmail.com"
+                  type="email"
+                  class="rounded-[8px] border border-white bg-white pl-12 pr-4 py-3 focus:outline-none"
+                />
+
+                <span
+                  class="text-[#8B5E35] absolute left-4 top-[50px] pointer-events-none"
+                >
+                  <i class="fa-regular fa-envelope"></i>
+                </span>
+
+                <div
+                  id="emailError"
+                  class="hidden p-4 text-sm text-red-800 rounded-lg bg-red-50"
+                ></div>
+              </div>
+
+              <div class="password flex flex-col relative gap-2">
+                <label
+                  for="signPass"
+                  class="font-popins font-medium text-lg text-[#090F41]"
+                >
+                  Password
+                </label>
+
+                <input
+                  id="signPass"
+                  placeholder="••••••••"
+                  type="password"
+                  class="rounded-[8px] border border-white bg-white pl-12 pr-4 py-3 focus:outline-none"
+                />
+
+                <span
+                  class="text-[#8B5E35] absolute left-4 top-[50px] pointer-events-none"
+                >
+                  <i class="fa-solid fa-lock"></i>
+                </span>
+
+                <div
+                  id="passwordError"
+                  class="hidden p-4 text-sm text-red-800 rounded-lg bg-red-50"
+                ></div>
+              </div>
+
+              <p
+                class="font-popins font-medium text-base text-[#8B5E35] underline cursor-pointer"
+              >
+                Forgot Password?
+              </p>
+
+              <button
+                id="login"
+                type="submit"
+                class="text-white bg-[#8B5E35] hover:bg-[rgba(139,95,53,0.8)] disabled:bg-gray-400 cursor-pointer font-medium rounded-lg text-sm px-5 py-3 text-center transition-all duration-300"
+              >
+                <span id="loginButtonText">Sign In</span>
+                <span id="loginSpinner" class="hidden">
+                  <i class="fas fa-spin fa-spinner"></i>
+                </span>
+              </button>
+
+              <p
+                class="font-popins font-medium text-lg text-[#667085] text-center"
+              >
+                Don’t have an account ?
+                <a
+                  href="./signUp.html"
+                  class="text-[#8B5E35] cursor-pointer underline"
+                >
+                  Sign up.
+                </a>
+              </p>
+
+              <p
+                id="userMessage"
+                class="hidden p-4 mt-2 text-white rounded text-lg"
+              ></p>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <script src="./main.js"></script>
+  </body>
+</html>
